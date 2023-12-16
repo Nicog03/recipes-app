@@ -1,5 +1,4 @@
 import Button from "./components/button";
-import Link from "next/link";
 import Image from "next/image";
 
 const Home = () => {
@@ -14,7 +13,7 @@ const Home = () => {
     >
       <div className="flex gap-4 bg-white p-2 rounded-2xl w-fit items-center ">
         <h1 className=" text-5xl font-montserrat font-bold text-right">
-          Travel <br />e App
+          Travel <br /> App
         </h1>
         <Image
           alt="location pin icon"
@@ -28,9 +27,7 @@ const Home = () => {
           Plan your <br />
           <span className="text-5xl font-medium"> Luxurious Vacation</span>
         </p>
-        <Link href={"/initial"}>
-          <Button text="Explore"></Button>
-        </Link>
+        <Button text="Explore"></Button>
       </div>
     </div>
   );
