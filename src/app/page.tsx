@@ -22,6 +22,7 @@ const Home = () => {
           height={70}
         ></Image>
       </div>
+
       <div className="text-white font-montserrat flex flex-col gap-6">
         <p className="text-2xl">
           Plan your <br />
