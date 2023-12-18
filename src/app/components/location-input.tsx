@@ -6,23 +6,21 @@ interface LocationInputTypes {
 
 const LocationInput: React.FC<LocationInputTypes> = ({ locationName }) => {
   return (
-    <>
-      <button className="flex gap-2">
-        <Image
-          src={"/icons/location-pin.svg"}
-          alt="location pin icon"
-          width={16}
-          height={16}
-        ></Image>
-        <p className="text-xs">{locationName}</p>
-        <Image
-          src={"/icons/arrow-down.svg"}
-          alt="down pointing arrow"
-          width={16}
-          height={16}
-        ></Image>
-      </button>
-    </>
+    <button className="flex gap-2 items-center">
+      <Image
+        src={"/icons/location-pin.svg"}
+        alt="location pin icon"
+        width={16}
+        height={16}
+      ></Image>
+      <p className="text-xs">{locationName}</p>
+      <Image
+        src={"/icons/arrow-down.svg"}
+        alt="down pointing arrow"
+        width={16}
+        height={16}
+      ></Image>
+    </button>
   );
 };
 
