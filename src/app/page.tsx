@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./components/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -29,7 +30,9 @@ const Home = () => {
           Plan your <br />
           <span className="text-5xl font-medium"> Luxurious Vacation</span>
         </p>
-        <Button text="Explore"></Button>
+        <Link href={"homepage"}>
+          <Button text="Explore" />
+        </Link>
       </div>
     </div>
   );
