@@ -2,17 +2,16 @@
 
 import SearchBar from "../components/search-bar";
 import Tag from "../components/tag";
-import AttractionCard from "../components/attraction-card";
 import Link from "next/link";
 import CompactAttractionCard from "../components/compact-attraction-card";
 import useEmblaCarousel from "embla-carousel-react";
 import LocationInput from "../components/location-input";
 import HomepageTitle from "../components/homepage-title";
 import NavBar from "../components/nav-bar";
+import AttractionCarousel from "../components/attraction-carousel";
 
 const Homepage = () => {
   const [tagsCarousel] = useEmblaCarousel();
-  const [cardsCarousel] = useEmblaCarousel();
   const [compactCardsCarousel] = useEmblaCarousel();
 
   const locationName = "Netherlands";
@@ -40,13 +39,7 @@ const Homepage = () => {
               <h1 className="font-semibold text-lg">Popular</h1>
               <Link href={""}>See All</Link>
             </div>
-            <div className="embla mr-[-1.25rem]" ref={cardsCarousel}>
-              <div className="embla__container">
-                <AttractionCard />
-                <AttractionCard />
-                <AttractionCard />
-              </div>
-            </div>
+            <AttractionCarousel />
           </section>
           <section className="flex flex-col gap-4">
             <h1 className="font-semibold text-lg">Recommended</h1>
