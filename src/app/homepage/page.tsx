@@ -2,7 +2,6 @@
 
 import SearchBar from "../components/search-bar";
 import Tag from "../components/tag";
-import AttractionCard from "../components/attraction-card";
 import Link from "next/link";
 import CompactAttractionCard from "../components/compact-attraction-card";
 import useEmblaCarousel from "embla-carousel-react";
@@ -13,7 +12,6 @@ import AttractionCarousel from "../components/attraction-carousel";
 
 const Homepage = () => {
   const [tagsCarousel] = useEmblaCarousel();
-  const [cardsCarousel] = useEmblaCarousel();
   const [compactCardsCarousel] = useEmblaCarousel();
 
   const locationName = "Netherlands";
