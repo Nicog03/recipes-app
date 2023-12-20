@@ -13,11 +13,7 @@ interface CarouselTypes {
   imagePath: string;
 }
 
-const AttractionCarousel: React.FC<CarouselTypes> = ({
-  name,
-  rating,
-  imagePath,
-}) => {
+const AttractionCarousel = ({}) => {
   const [carousel] = useEmblaCarousel();
 
   return (
