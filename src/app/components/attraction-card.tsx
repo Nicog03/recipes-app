@@ -1,5 +1,6 @@
 import Image from "next/image";
 import AttractionTag from "./attraction-tag";
+import Link from "next/link";
 
 interface LocationType {
   name: string;
@@ -13,7 +14,7 @@ const AttractionCard: React.FC<LocationType> = ({
   imagePath,
 }) => {
   return (
-    <>
+    <Link href={"/details"}>
       <div
         className=" flex items-end h-60 w-48 bg-gray-200 rounded-3xl"
         style={{
@@ -37,7 +38,7 @@ const AttractionCard: React.FC<LocationType> = ({
           </button>
         </div>
       </div>
-    </>
+    </Link>
   );
 };
 
