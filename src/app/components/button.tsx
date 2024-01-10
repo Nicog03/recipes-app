@@ -17,7 +17,7 @@ const Button: React.FC<Button> = ({ text, iconPath }) => {
             alt="icon"
             width={24}
             height={24}
-            className="invert"
+            className="brightness-0 invert"
           ></Image>
         ) : null}
       </button>
