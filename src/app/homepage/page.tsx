@@ -5,7 +5,7 @@ import Link from "next/link";
 import LocationInput from "../components/location-input";
 import HomepageTitle from "../components/homepage-title";
 import NavBar from "../components/nav-bar";
-import AttractionCarousel from "../components/attraction-carousel";
+import AttractionCarousel from "../components/molecules/attraction-carousel";
 import CompactCardCarousel from "../components/compact-card-carousel";
 import TagsCarousel from "../components/tag-carousel";
 
