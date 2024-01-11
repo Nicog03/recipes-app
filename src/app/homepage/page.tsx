@@ -13,7 +13,6 @@ const Homepage = () => {
 
   return (
     <div className="p-5 flex flex-col gap-6">
-      <NavBar />
       <div className="flex justify-between items-start">
         <HomepageTitle locationName={locationName} />
         <LocationInput locationName={locationName} />
@@ -22,6 +21,7 @@ const Homepage = () => {
       <TagsCarousel />
       <PopularSection />
       <RecommendedSection />
+      <NavBar />
     </div>
   );
 };
