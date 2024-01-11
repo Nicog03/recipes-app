@@ -1,5 +1,5 @@
 import useEmblaCarousel from "embla-carousel-react";
-import AttractionCard from "./attraction-card";
+import AttractionCard from "../attraction-card";
 
 const examplePlaces = [
   { name: "Amsterdam", rating: "4.7", imagePath: "/images/landscape.jpg" },
