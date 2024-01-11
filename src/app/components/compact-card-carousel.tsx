@@ -1,5 +1,5 @@
 import useEmblaCarousel from "embla-carousel-react";
-import CompactAttractionCard from "../compact-attraction-card";
+import CompactAttractionCard from "./compact-attraction-card";
 
 const CompactCardCarousel = () => {
   const [compactCarousel] = useEmblaCarousel();
