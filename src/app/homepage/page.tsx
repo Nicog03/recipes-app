@@ -1,8 +1,6 @@
 "use client";
 
 import SearchBar from "../components/search-bar";
-import LocationInput from "../components/location-input";
-import HomepageTitle from "../components/homepage-title";
 import NavBar from "../components/nav-bar";
 import TagsCarousel from "../components/tag-carousel";
 import PopularSection from "../components/molecules/popular-section";
