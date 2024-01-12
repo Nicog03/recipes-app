@@ -6,7 +6,7 @@ interface LocationInputTypes {
 
 const LocationInput: React.FC<LocationInputTypes> = ({ locationName }) => {
   return (
-    <button className="flex gap-2 items-center">
+    <button className="flex gap-2 items-center p-1 rounded-xl hover:bg-gray-100 transition">
       <Image
         src={"/icons/location-pin.svg"}
         alt="location pin icon"
