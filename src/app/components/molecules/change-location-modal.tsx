@@ -28,7 +28,10 @@ const ChangeLocationModal: React.FC<I> = ({ clickFunction }) => {
             />
           </button>
         </div>
-        <form className="flex flex-col gap-2">
+        <form
+          className="flex flex-col gap-2"
+          onSubmit={(e) => e.preventDefault()}
+        >
           <SearchBar placeholder="Country" />
           <Button text="Search" />
         </form>
