@@ -16,6 +16,7 @@ const ChangeLocationModal: React.FC<I> = ({ clickFunction }) => {
         <div className="flex justify-between">
           <Header size="small" text="Select the country" />{" "}
           <button
+            className="hover:bg-gray-200 transition rounded-full h-fit w-fit p-1"
             onClick={clickFunction as MouseEventHandler<HTMLButtonElement>}
           >
             <Image
