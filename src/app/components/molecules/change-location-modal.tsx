@@ -2,6 +2,7 @@ import SearchBar from "../search-bar";
 import Image from "next/image";
 import Header from "../header-component";
 import { MouseEventHandler } from "react";
+import Button from "../button";
 
 interface I {
   clickFunction:
@@ -27,7 +28,10 @@ const ChangeLocationModal: React.FC<I> = ({ clickFunction }) => {
             />
           </button>
         </div>
-        <SearchBar placeholder="Country" />
+        <form className="flex flex-col gap-2">
+          <SearchBar placeholder="Country" />
+          <Button text="Search" />
+        </form>
       </section>
       <div
         onClick={clickFunction as MouseEventHandler<HTMLDivElement>}
