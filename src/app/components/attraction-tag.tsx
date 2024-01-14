@@ -13,7 +13,7 @@ const AttractionTag: React.FC<AttractionTag> = ({
 }) => {
   return (
     <>
-      <div className="bg-[#4D5652] w-fit px-3 py-1 rounded-2xl flex gap-1">
+      <div className="bg-black bg-opacity-75 w-fit px-3 py-1 rounded-2xl flex gap-1">
         {iconUrl && iconPosition == "left" ? (
           <Image alt="icon" src={iconUrl} height={16} width={16} />
         ) : null}
