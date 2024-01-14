@@ -1,14 +1,28 @@
+import Image from "next/image";
+
 interface RoundedButtonInterface {
   imageUrl: string;
+  height: number;
+  width: number;
 }
 
-const RoundedButton: React.FC<RoundedButtonInterface> = ({ imageUrl }) => {
+const RoundedButton: React.FC<RoundedButtonInterface> = ({
+  imageUrl,
+  height,
+  width,
+}) => {
   return (
     <button
       type="button"
-      className="absolute h-11 w-11 right-3 -bottom-5 bg-gray-200 hover:bg-gray-300 transition rounded-full p-2"
+      className=" bg-black bg-opacity-75 hover:bg-gray-700 transition rounded-full p-2"
     >
-      <img src={imageUrl} alt="heart icon" className="invert" />
+      <Image
+        className="invert"
+        alt="icon image"
+        src={imageUrl}
+        width={width}
+        height={height}
+      />
     </button>
   );
 };
