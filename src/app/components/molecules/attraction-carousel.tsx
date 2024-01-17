@@ -2,9 +2,19 @@ import useEmblaCarousel from "embla-carousel-react";
 import AttractionCard from "../attraction-card";
 
 const examplePlaces = [
-  { name: "Amsterdam", rating: "4.7", imagePath: "/images/landscape.jpg" },
-  { name: "Delft", rating: "4.5", imagePath: "/images/landscape.jpg" },
-  { name: "Giethoorn", rating: "4.6", imagePath: "/images/landscape.jpg" },
+  {
+    name: "Amsterdam",
+    rating: "4.7",
+    imagePath: "/images/landscape.jpg",
+    id: "1",
+  },
+  { name: "Delft", rating: "4.5", imagePath: "/images/landscape.jpg", id: "2" },
+  {
+    name: "Giethoorn",
+    rating: "4.6",
+    imagePath: "/images/landscape.jpg",
+    id: "3",
+  },
 ];
 
 interface CarouselTypes {
@@ -24,6 +34,7 @@ const AttractionCarousel = ({}) => {
             name={place.name}
             rating={place.rating}
             imagePath={place.imagePath}
+            key={place.id}
           />
         ))}
       </div>
