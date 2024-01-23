@@ -1,15 +1,15 @@
-import Link from "next/link";
-import AttractionCarousel from "./attraction-carousel";
 import TextButton from "../text-button";
+import Header from "../header-component";
+import DishesCarousel from "./dishes-carousel";
 
 const PopularSection = () => {
   return (
     <section className="flex flex-col gap-3">
       <div className="flex justify-between">
-        <h1 className="font-montserrat font-semibold text-lg">Popular</h1>
-        <TextButton text="See all" />
+        <Header text="Popular Dishes" size="small" />
+        <TextButton text="See more" />
       </div>
-      <AttractionCarousel />
+      <DishesCarousel />
     </section>
   );
 };
