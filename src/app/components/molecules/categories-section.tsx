@@ -34,6 +34,7 @@ const CategoriesSection = () => {
             categoryName={node.name}
             imageUrl={node.imageUrl}
             cardColor={node.color}
+            key={node.name}
           />
         ))}
       </div>
