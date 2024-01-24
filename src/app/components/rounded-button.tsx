@@ -14,15 +14,9 @@ const RoundedButton: React.FC<RoundedButtonInterface> = ({
   return (
     <button
       type="button"
-      className=" bg-black bg-opacity-75 hover:bg-gray-700 transition rounded-full p-2"
+      className=" bg-white  hover:brightness-90 transition rounded-full p-2"
     >
-      <Image
-        className="invert"
-        alt="icon image"
-        src={imageUrl}
-        width={width}
-        height={height}
-      />
+      <Image alt="icon image" src={imageUrl} width={width} height={height} />
     </button>
   );
 };

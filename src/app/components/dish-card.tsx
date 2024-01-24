@@ -1,4 +1,3 @@
-import Image from "next/image";
 import AttractionTag from "./attraction-tag";
 import Link from "next/link";
 import RoundedButton from "./rounded-button";
@@ -9,11 +8,7 @@ interface LocationType {
   imagePath: string;
 }
 
-const AttractionCard: React.FC<LocationType> = ({
-  name,
-  rating,
-  imagePath,
-}) => {
+const DishCard: React.FC<LocationType> = ({ name, rating, imagePath }) => {
   return (
     <Link href={"/details"}>
       <div
@@ -26,7 +21,11 @@ const AttractionCard: React.FC<LocationType> = ({
         <div className="p-3 flex items-end justify-between w-full">
           <div className="flex flex-col gap-2 ">
             <AttractionTag text={name} />
-            <AttractionTag text={rating} iconUrl="/icons/star.svg" />
+            <AttractionTag
+              text={rating}
+              backgroundColor="--accent"
+              textColor="--white"
+            />
           </div>
           <RoundedButton
             imageUrl="/icons/heart-lined.svg"
@@ -39,4 +38,4 @@ const AttractionCard: React.FC<LocationType> = ({
   );
 };
 
-export default AttractionCard;
+export default DishCard;
