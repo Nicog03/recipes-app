@@ -15,14 +15,6 @@ const NavBar = () => {
       </Link>
       <Link href={"#"}>
         <Image
-          src={"/icons/ticket-icon.svg"}
-          alt="heart icon"
-          width={24}
-          height={24}
-        />
-      </Link>
-      <Link href={"#"}>
-        <Image
           src={"/icons/heart-icon.svg"}
           alt="heart icon"
           width={24}
