@@ -1,27 +1,26 @@
 import Header from "../header-component";
-import TextButton from "../text-button";
-import ReviewSummary from "../review-summary";
-import DescriptionParagraph from "../description-paragraph";
+import Link from "next/link";
 
-const descText =
-  "Aspen is as close as one can get to a storybook alpine town in America. The choose-your-own-adventure possibilities—skiing, hiking, dining shopping and ....";
+interface DescriptionHeadingInterface {
+  title: string;
+  credits: string;
+}
 
-const AttractionDescription = () => {
+const DescriptionHeading: React.FC<DescriptionHeadingInterface> = ({
+  credits,
+  title,
+}) => {
   return (
-    <div className="flex flex-col gap-4">
-      <div>
-        <div className="flex justify-between">
-          <Header text="Coeurdes Alpes" size="medium" />
-          <TextButton text="Show map" />
-        </div>
-        <ReviewSummary reviewAmount={355} reviewValue="4.5" />
-      </div>
-      <div className="flex flex-col gap-2a">
-        <DescriptionParagraph text={descText} />
-        <TextButton text="Read more" iconUrl="/icons/down-arrow.svg" />
-      </div>
+    <div>
+      <Header text={title} size="medium" />
+      <Link
+        className="text-[--gray] text-xs underline hover:text-black transiti"
+        href={"#"}
+      >
+        {credits}
+      </Link>
     </div>
   );
 };
 
-export default AttractionDescription;
+export default DescriptionHeading;
