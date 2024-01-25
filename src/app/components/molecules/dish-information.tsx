@@ -1,7 +1,7 @@
 import Header from "../header-component";
 import InformationItem from "../information-item";
 
-const AttractionFacilities = () => {
+const DishInformation = () => {
   return (
     <div className="flex flex-col gap-1">
       <Header text="Dish Information" size="small" />
@@ -14,4 +14,4 @@ const AttractionFacilities = () => {
   );
 };
 
-export default AttractionFacilities;
+export default DishInformation;
