@@ -1,15 +1,14 @@
 import Header from "../header-component";
-import FacilityItem from "../facility-item";
+import InformationItem from "../information-item";
 
 const AttractionFacilities = () => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-1">
       <Header text="Facilites" size="small" />
-      <div className="grid grid-flow-col justify-between">
-        <FacilityItem name="1 Heater" iconUrl="/icons/wifi-icon.svg" />
-        <FacilityItem name="Dinner" iconUrl="/icons/food-icon.svg" />
-        <FacilityItem name="1 Tub" iconUrl="/icons/bathtub-icon.svg" />
-        <FacilityItem name="Pool" iconUrl="/icons/pool-icon.svg" />
+      <div className="flex gap-2">
+        <InformationItem name="45 min" iconUrl="/icons/cronometer-icon.svg" />
+        <InformationItem name="2 servings" iconUrl="/icons/chart-icon.svg" />
+        <InformationItem name="Contains Dairy" iconUrl="/icons/milk-icon.svg" />
       </div>
     </div>
   );
