@@ -4,7 +4,7 @@ import InformationItem from "../information-item";
 const AttractionFacilities = () => {
   return (
     <div className="flex flex-col gap-1">
-      <Header text="Facilites" size="small" />
+      <Header text="Dish Information" size="small" />
       <div className="flex gap-2">
         <InformationItem name="45 min" iconUrl="/icons/cronometer-icon.svg" />
         <InformationItem name="2 servings" iconUrl="/icons/chart-icon.svg" />
