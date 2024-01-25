@@ -14,7 +14,7 @@ const DescriptionHeading: React.FC<DescriptionHeadingInterface> = ({
     <div>
       <Header text={title} size="medium" />
       <Link
-        className="text-[--gray] text-xs underline hover:text-black transiti"
+        className="text-[--gray] text-xs underline hover:text-black transition"
         href={"#"}
       >
         {credits}
