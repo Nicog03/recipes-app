@@ -8,9 +8,9 @@ const LargeAttractionImage = () => {
         <SquaredButton imageUrl="/icons/left-caret-icon.svg" />
       </div>
       <img
-        src="/images/landscape.jpg"
+        src="/images/food-bowl.jpg"
         alt="Image of the attraction"
-        className="h-80 object-cover rounded-3xl"
+        className="h-80 w-full object-cover rounded-3xl"
       />
       <span className="absolute right-3 -bottom-5 ">
         <RoundedButton

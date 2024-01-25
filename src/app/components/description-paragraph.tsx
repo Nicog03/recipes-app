@@ -1,12 +1,19 @@
+import TextButton from "./text-button";
+
 interface DescriptionParagraphInterface {
-  text: string;
+  description: string;
 }
 
 const DescriptionParagraph: React.FC<DescriptionParagraphInterface> = ({
-  text,
+  description,
 }) => {
   return (
-    <p className="text-gray-500 font-montserrat text-sm leading-4">{text}</p>
+    <div className="flex flex-col gap-1">
+      <p className="text-gray-500 font-montserrat text-sm leading-4">
+        {description}
+      </p>
+      <TextButton text="Read more" iconUrl="/icons/down-arrow.svg" />
+    </div>
   );
 };
 
