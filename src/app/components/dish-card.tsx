@@ -4,34 +4,45 @@ import RoundedButton from "./rounded-button";
 
 interface LocationType {
   name: string;
-  rating: string;
   imagePath: string;
+  dishType: string;
+  isPopular: boolean;
 }
 
-const DishCard: React.FC<LocationType> = ({ name, rating, imagePath }) => {
+const DishCard: React.FC<LocationType> = ({
+  name,
+  imagePath,
+  dishType,
+  isPopular,
+}) => {
   return (
     <Link href={"/details"}>
       <div
         className=" flex items-end h-60 w-48 bg-gray-200 rounded-3xl"
         style={{
-          backgroundImage: `url(${imagePath})`,
+          backgroundImage: `linear-gradient(to bottom, transparent, transparent, black), url(${imagePath})`,
           backgroundSize: "cover",
         }}
       >
-        <div className="p-3 flex items-end justify-between w-full">
-          <div className="flex flex-col gap-2 ">
-            <AttractionTag text={name} />
-            <AttractionTag
-              text={rating}
-              backgroundColor="--accent"
-              textColor="--white"
+        <div className="flex flex-col justify-between p-3 h-full w-full">
+          <div className="flex justify-between w-full text-sm">
+            {dishType && <p className="text-white">{dishType}</p>}
+            {isPopular && (
+              <p className="bg-[--yellow-accent] rounded-full p-1 text-white font-semibold">
+                Popular
+              </p>
+            )}
+          </div>
+          <div className=" flex gap-1 items-end justify-between w-full">
+            <p className="text-white font-montserrat font-semibold leading-5">
+              {name}
+            </p>
+            <RoundedButton
+              imageUrl="/icons/heart-lined.svg"
+              height={24}
+              width={24}
             />
           </div>
-          <RoundedButton
-            imageUrl="/icons/heart-lined.svg"
-            height={24}
-            width={24}
-          />
         </div>
       </div>
     </Link>
