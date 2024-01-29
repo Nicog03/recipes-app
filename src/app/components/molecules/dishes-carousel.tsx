@@ -41,6 +41,7 @@ const DishesCarousel = () => {
             key={dish.id}
             dishType={dish.dishType}
             isPopular={dish.isPopular}
+            id={dish.id}
           />
         ))}
       </div>
