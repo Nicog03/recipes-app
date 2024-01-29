@@ -7,6 +7,7 @@ interface LocationType {
   imagePath: string;
   dishType: string;
   isPopular: boolean;
+  id: string;
 }
 
 const DishCard: React.FC<LocationType> = ({
@@ -14,9 +15,10 @@ const DishCard: React.FC<LocationType> = ({
   imagePath,
   dishType,
   isPopular,
+  id,
 }) => {
   return (
-    <Link href={"/details"}>
+    <Link href={`/product/${id}`}>
       <div
         className=" flex items-end h-60 w-48 bg-gray-200 rounded-3xl"
         style={{
