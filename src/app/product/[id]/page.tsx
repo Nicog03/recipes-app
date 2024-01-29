@@ -1,9 +1,9 @@
-import LargeAttractionImage from "../components/large-attraction-image";
-import DescriptionParagraph from "../components/description-paragraph";
-import DescriptionHeading from "../components/molecules/description-heading";
-import DishInformation from "../components/molecules/dish-information";
-import IngredientsSection from "../components/molecules/ingredients-section";
-import RecipeSection from "../components/molecules/recipe-section";
+import LargeAttractionImage from "../../components/large-attraction-image";
+import DescriptionParagraph from "../../components/description-paragraph";
+import DescriptionHeading from "../../components/molecules/description-heading";
+import DishInformation from "../../components/molecules/dish-information";
+import IngredientsSection from "../../components/molecules/ingredients-section";
+import RecipeSection from "../../components/molecules/recipe-section";
 
 const descText =
   "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs might be a good recipe to expand your main course repertoire. One portion of this dish contains approximately 19g of protein...";
