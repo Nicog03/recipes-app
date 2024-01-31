@@ -1,46 +1,20 @@
 import useEmblaCarousel from "embla-carousel-react";
 import DishCard from "../dish-card";
+import { Dish } from "../../../../api/api-requests";
 
-const exampleDishes = [
-  {
-    name: "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs",
-    price: "$15",
-    imagePath: "/images/food-bowl.jpg",
-    id: "1",
-    dishType: "dinner",
-    isPopular: false,
-  },
-  {
-    name: "Tacos",
-    price: "$12",
-    imagePath: "/images/food-bowl.jpg",
-    id: "2",
-    dishType: "side dish",
-    isPopular: true,
-  },
-  {
-    name: "Fried Rice",
-    price: "$20",
-    imagePath: "/images/food-bowl.jpg",
-    id: "3",
-    dishType: "dinner",
-    isPopular: true,
-  },
-];
-
-const DishesCarousel = () => {
+const DishesCarousel = ({ recipes }: any) => {
   const [carousel] = useEmblaCarousel();
 
   return (
     <div className="embla mr-[-1.25rem]" ref={carousel}>
       <div className="embla__container">
-        {exampleDishes.map((dish) => (
+        {recipes?.map((dish: Dish) => (
           <DishCard
-            name={dish.name}
-            imagePath={dish.imagePath}
+            name={dish.title}
+            imagePath={dish.image}
             key={dish.id}
-            dishType={dish.dishType}
-            isPopular={dish.isPopular}
+            dishType={dish.dishTypes[0]}
+            isPopular={dish.veryPopular}
             id={dish.id}
           />
         ))}

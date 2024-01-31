@@ -6,7 +6,7 @@ interface LocationType {
   imagePath: string;
   dishType: string;
   isPopular: boolean;
-  id: string;
+  id: number;
 }
 
 const DishCard: React.FC<LocationType> = ({
