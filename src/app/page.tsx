@@ -1,5 +1,3 @@
-// "use client";
-
 import SearchBar from "./components/search-bar";
 import HomepageTitle from "./components/homepage-title";
 import NavBar from "./components/nav-bar";
@@ -22,7 +20,7 @@ const Homepage = async () => {
 
   return (
     <div className="p-5 flex flex-col gap-6">
-      {/* <NavBar /> */}
+      <NavBar />
       <HomepageTitle userName="Frederico" />
       <SearchBar placeholder="Find things to do" />
       <HydrationBoundary state={dehydrate(queryClient)}>
