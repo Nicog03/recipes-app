@@ -9,6 +9,9 @@ export type Dish = {
 };
 
 export async function getRandomRecipes() {
+  console.log(
+    `https://api.spoonacular.com/recipes/random?number=5&apiKey=${API_KEY}`
+  );
   const URL = `https://api.spoonacular.com/recipes/random?number=5&apiKey=${API_KEY}`;
 
   //   const res = await fetch("https://jsonplaceholder.typicode.com/users");
