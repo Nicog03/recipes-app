@@ -1,4 +1,3 @@
-import AttractionTag from "./attraction-tag";
 import Link from "next/link";
 import RoundedButton from "./rounded-button";
 
