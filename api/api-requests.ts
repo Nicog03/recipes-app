@@ -24,6 +24,6 @@ export async function getRecipe(id: number) {
   const res = await fetch(
     `https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`
   );
-  const recipe = await res.json();
+  const recipe = (await res.json()) as Dish;
   return recipe;
 }
