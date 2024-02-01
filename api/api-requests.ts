@@ -19,3 +19,11 @@ export async function getRandomRecipes() {
   const recipes = await res.json();
   return recipes;
 }
+
+export async function getRecipe(id: number) {
+  const res = await fetch(
+    `https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`
+  );
+  const recipe = await res.json();
+  return recipe;
+}
