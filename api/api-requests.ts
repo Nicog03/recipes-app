@@ -1,11 +1,23 @@
 import { API_KEY } from "../config";
 
+export type IngredientType = {
+  id: number;
+  name: string;
+  amount: number;
+  unit: string;
+};
+
 export type Dish = {
   title: string;
   image: string;
   veryPopular: boolean;
   dishTypes: string[];
   id: number;
+  sourceName: string;
+  sourceUrl: string;
+  summary: string;
+  instructions: string;
+  extendedIngredients: IngredientType[];
 };
 
 export async function getRandomRecipes() {
