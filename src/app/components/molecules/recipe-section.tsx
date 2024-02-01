@@ -8,7 +8,9 @@ const RecipeSection: React.FC<RecipeSectionInterface> = ({ recipe }) => {
   return (
     <section>
       <Header text="Recipe" size="small" />
-      <p>{recipe}</p>
+      <p>
+        <div dangerouslySetInnerHTML={{ __html: recipe }}></div>
+      </p>
     </section>
   );
 };

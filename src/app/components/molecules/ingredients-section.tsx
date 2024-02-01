@@ -1,46 +1,14 @@
+import { IngredientType } from "../../../../api/api-requests";
 import Header from "../header-component";
 import IngredientEntry from "../ingredient-entry";
 
-const ingredients = [
-  {
-    name: "Butter",
-    amount: "1 tbsp",
-  },
-  {
-    name: "Cauliflower",
-    amount: "2 cups",
-  },
-  {
-    name: "Cheese",
-    amount: "2 tbsp",
-  },
-  {
-    name: "Extra virgin olive oil",
-    amount: "1-2 tbsp",
-  },
-  {
-    name: "Garlic",
-    amount: "5-6 cloves",
-  },
-  {
-    name: "Pasta",
-    amount: "6-8 ounces",
-  },
-  {
-    name: "Red pepper flakes",
-    amount: "",
-  },
-  {
-    name: "Salt and pepper",
-    amount: "to taste",
-  },
-  {
-    name: "Scallions",
-    amount: "3 scallions",
-  },
-];
+interface IngredientsSectionInterface {
+  ingredients: IngredientType[];
+}
 
-const IngredientsSection = () => {
+const IngredientsSection: React.FC<IngredientsSectionInterface> = ({
+  ingredients,
+}) => {
   return (
     <div className="flex flex-col gap-1">
       <Header text="Ingredients" size="small" />
@@ -50,6 +18,8 @@ const IngredientsSection = () => {
             <IngredientEntry
               name={ingredient.name}
               amount={ingredient.amount}
+              unit={ingredient.unit}
+              key={ingredient.id}
             />
           );
         })}

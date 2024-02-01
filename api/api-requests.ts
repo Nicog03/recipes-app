@@ -1,11 +1,23 @@
 import { API_KEY } from "../config";
 
+export type IngredientType = {
+  id: number;
+  name: string;
+  amount: number;
+  unit: string;
+};
+
 export type Dish = {
   title: string;
   image: string;
   veryPopular: boolean;
   dishTypes: string[];
   id: number;
+  sourceName: string;
+  sourceUrl: string;
+  summary: string;
+  instructions: string;
+  extendedIngredients: IngredientType[];
 };
 
 export async function getRandomRecipes() {
@@ -18,4 +30,12 @@ export async function getRandomRecipes() {
   const res = await fetch(URL);
   const recipes = await res.json();
   return recipes;
+}
+
+export async function getRecipe(id: number) {
+  const res = await fetch(
+    `https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`
+  );
+  const recipe = (await res.json()) as Dish;
+  return recipe;
 }
