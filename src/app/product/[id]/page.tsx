@@ -25,8 +25,6 @@ const AttractionPage = ({ params }: any) => {
     refetchOnWindowFocus: false,
   });
 
-  console.log(data?.extendedIngredients);
-
   return isFetching ? (
     <LoadingDishPage />
   ) : (
