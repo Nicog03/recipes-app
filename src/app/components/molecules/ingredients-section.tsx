@@ -6,6 +6,10 @@ interface IngredientsSectionInterface {
   ingredients: IngredientType[];
 }
 
+const capitalizeFirstLetter = (string: string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
+
 const IngredientsSection: React.FC<IngredientsSectionInterface> = ({
   ingredients,
 }) => {
@@ -16,7 +20,7 @@ const IngredientsSection: React.FC<IngredientsSectionInterface> = ({
         {ingredients.map((ingredient) => {
           return (
             <IngredientEntry
-              name={ingredient.name}
+              name={capitalizeFirstLetter(ingredient.originalName)}
               amount={ingredient.amount}
               unit={ingredient.unit}
               key={ingredient.id}
