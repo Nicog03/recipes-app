@@ -9,7 +9,6 @@ import RecipeSection from "../../components/molecules/recipe-section";
 import { useQuery } from "@tanstack/react-query";
 import { getRecipe } from "../../../../api/api-requests";
 import LoadingDishPage from "@/app/components/loading-dish-page";
-import { InstructionType } from "../../../../api/api-requests";
 
 const descText =
   "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs might be a good recipe to expand your main course repertoire. One portion of this dish contains approximately 19g of protein...";
@@ -38,7 +37,11 @@ const AttractionPage = ({ params }: any) => {
           sourceUrl={data.sourceUrl}
         />
         <DescriptionParagraph description={data.summary} />
-        <DishInformation />
+        <DishInformation
+          dairyFree={data.dairyFree}
+          readyInMinutes={data.readyInMinutes}
+          servings={data.servings}
+        />
         <IngredientsSection ingredients={data.extendedIngredients} />
         <RecipeSection recipe={data.analyzedInstructions} />
       </div>
