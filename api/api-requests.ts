@@ -25,6 +25,9 @@ export type Dish = {
   instructions: string;
   extendedIngredients: IngredientType[];
   analyzedInstructions: [];
+  readyInMinutes: number;
+  servings: number;
+  dairyFree: boolean;
 };
 
 export async function getRandomRecipes() {
