@@ -5,6 +5,12 @@ export type IngredientType = {
   name: string;
   amount: number;
   unit: string;
+  originalName: string;
+};
+
+export type InstructionType = {
+  step: string;
+  number: number;
 };
 
 export type Dish = {
@@ -18,6 +24,10 @@ export type Dish = {
   summary: string;
   instructions: string;
   extendedIngredients: IngredientType[];
+  analyzedInstructions: [];
+  readyInMinutes: number;
+  servings: number;
+  dairyFree: boolean;
 };
 
 export async function getRandomRecipes() {

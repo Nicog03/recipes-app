@@ -25,8 +25,6 @@ const AttractionPage = ({ params }: any) => {
     refetchOnWindowFocus: false,
   });
 
-  console.log(data?.extendedIngredients);
-
   return isFetching ? (
     <LoadingDishPage />
   ) : (
@@ -39,9 +37,13 @@ const AttractionPage = ({ params }: any) => {
           sourceUrl={data.sourceUrl}
         />
         <DescriptionParagraph description={data.summary} />
-        <DishInformation />
+        <DishInformation
+          dairyFree={data.dairyFree}
+          readyInMinutes={data.readyInMinutes}
+          servings={data.servings}
+        />
         <IngredientsSection ingredients={data.extendedIngredients} />
-        <RecipeSection recipe={data.instructions} />
+        <RecipeSection recipe={data.analyzedInstructions} />
       </div>
     )
   );
