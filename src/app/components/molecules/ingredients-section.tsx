@@ -1,7 +1,6 @@
 import { IngredientType } from "../../../../api/api-requests";
 import Header from "../header-component";
 import IngredientEntry from "../ingredient-entry";
-import Image from "next/image";
 
 interface IngredientsSectionInterface {
   ingredients: IngredientType[];
