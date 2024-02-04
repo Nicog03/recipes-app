@@ -1,14 +1,35 @@
 import Header from "../header-component";
 import InformationItem from "../information-item";
 
-const DishInformation = () => {
+interface DishInformationInterface {
+  readyInMinutes: number;
+  servings: number;
+  dairyFree: boolean;
+}
+
+const DishInformation: React.FC<DishInformationInterface> = ({
+  readyInMinutes,
+  dairyFree,
+  servings,
+}) => {
   return (
     <div className="flex flex-col gap-1">
       <Header text="Dish Information" size="small" />
       <div className="flex gap-2">
-        <InformationItem name="45 min" iconUrl="/icons/cronometer-icon.svg" />
-        <InformationItem name="2 servings" iconUrl="/icons/chart-icon.svg" />
-        <InformationItem name="Contains Dairy" iconUrl="/icons/milk-icon.svg" />
+        <InformationItem
+          name={`${readyInMinutes} min`}
+          iconUrl="/icons/cronometer-icon.svg"
+        />
+        <InformationItem
+          name={`${servings} servings`}
+          iconUrl="/icons/chart-icon.svg"
+        />
+        <InformationItem
+          name={dairyFree ? "No Dairy" : "Contains Dairy"}
+          iconUrl={
+            dairyFree ? "/icons/no-dairy-icon.svg" : "/icons/milk-icon.svg"
+          }
+        />
       </div>
     </div>
   );
