@@ -28,6 +28,7 @@ export type Dish = {
   dairyFree: boolean;
   vegetarian: boolean;
   vegan: boolean;
+  glutenFree: boolean;
 };
 
 export async function getRandomRecipes() {
