@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 interface InformationInterface {
-  name: string;
+  name: string | number;
   iconUrl: string;
 }
 
