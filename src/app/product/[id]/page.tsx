@@ -37,6 +37,7 @@ const AttractionPage = ({ params }: any) => {
           servings={data.servings}
           isVegan={data.vegan}
           isVegetarian={data.vegetarian}
+          glutenFree={data.glutenFree}
         />
         <IngredientsSection ingredients={data.extendedIngredients} />
         <RecipeSection recipe={data.analyzedInstructions} />
