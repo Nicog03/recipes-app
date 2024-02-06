@@ -1,5 +1,6 @@
 import Link from "next/link";
 import RoundedButton from "./rounded-button";
+import { capitalizeFirstLetter } from "./molecules/ingredients-section";
 
 interface LocationType {
   name: string;
@@ -23,13 +24,18 @@ const DishCard: React.FC<LocationType> = ({
         style={{
           backgroundImage: `linear-gradient(to bottom, transparent, transparent, black), url(${imagePath})`,
           backgroundSize: "cover",
+          boxShadow: isPopular ? "#fcd63c inset 3px 3px 5px " : "none",
         }}
       >
-        <div className="flex flex-col justify-between p-3 h-full w-full">
+        <div className="font-montserrat flex flex-col justify-between p-3 h-full w-full">
           <div className="flex justify-between w-full text-sm">
-            {dishType && <p className="text-white">{dishType}</p>}
+            {dishType && (
+              <p className="font-semibold text-xs text-black bg-white px-2 py-1 rounded-full">
+                {capitalizeFirstLetter(dishType)}
+              </p>
+            )}
             {isPopular && (
-              <p className="bg-[--yellow-accent] rounded-full p-1 text-white font-semibold">
+              <p className="bg-[--yellow-accent] text-xs rounded-full py-1 px-2 text-black font-semibold">
                 Popular
               </p>
             )}
