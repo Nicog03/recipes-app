@@ -10,12 +10,6 @@ import { useQuery } from "@tanstack/react-query";
 import { getRecipe } from "../../../../api/api-requests";
 import LoadingDishPage from "@/app/components/loading-dish-page";
 
-const descText =
-  "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs might be a good recipe to expand your main course repertoire. One portion of this dish contains approximately 19g of protein...";
-
-const recipeText =
-  "Bring a large pot of water to a boil and season generously with salt. Add the pasta to the water once boiling and cook until al dente. Reserve 2 cups of cooking water and drain the pasta.";
-
 const AttractionPage = ({ params }: any) => {
   const id = params.id;
 
@@ -41,6 +35,8 @@ const AttractionPage = ({ params }: any) => {
           dairyFree={data.dairyFree}
           readyInMinutes={data.readyInMinutes}
           servings={data.servings}
+          isVegan={data.vegan}
+          isVegetarian={data.vegetarian}
         />
         <IngredientsSection ingredients={data.extendedIngredients} />
         <RecipeSection recipe={data.analyzedInstructions} />
