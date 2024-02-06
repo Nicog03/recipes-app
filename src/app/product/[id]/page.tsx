@@ -14,7 +14,7 @@ const AttractionPage = ({ params }: any) => {
   const id = params.id;
 
   const { data, isFetching } = useQuery({
-    queryKey: ["random-recipes"],
+    queryKey: ["recipe"],
     queryFn: () => getRecipe(id),
     refetchOnWindowFocus: false,
   });
