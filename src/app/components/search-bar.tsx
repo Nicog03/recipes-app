@@ -13,7 +13,11 @@ const SearchBar: React.FC<SearchBar> = ({ placeholder }) => {
 
   function navigate(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    push("/search");
+    console.log(e.target);
+    const inputValue: string = (
+      (e.target as HTMLFormElement)[0] as HTMLInputElement
+    ).value;
+    push(`/search?term=${inputValue}`);
   }
 
   return (
