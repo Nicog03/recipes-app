@@ -4,12 +4,17 @@ import Image from "next/image";
 type CompactCardProps = {
   imageUrl: string;
   dishTitle: string;
+  id: number;
 };
 
-export default function CompactCard({ imageUrl, dishTitle }: CompactCardProps) {
+export default function CompactCard({
+  imageUrl,
+  dishTitle,
+  id,
+}: CompactCardProps) {
   return (
     <Link
-      href={"#"}
+      href={`/product/${id}`}
       className="flex gap-3 items-start bg-white p-2 rounded-2xl h-fit"
     >
       <div className="h-20 w-20 relative flex-shrink-0 ">
