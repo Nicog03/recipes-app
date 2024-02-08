@@ -10,17 +10,19 @@ export default function CompactCard({ imageUrl, dishTitle }: CompactCardProps) {
   return (
     <Link
       href={"#"}
-      className="flex gap-3 items-center bg-white p-2 rounded-2xl h-16"
+      className="flex gap-3 items-start bg-white p-2 rounded-2xl h-fit"
     >
-      <div className="h-12 w-12 relative flex-shrink-0">
+      <div className="h-20 w-20 relative flex-shrink-0 ">
         <Image
           alt="dish image"
           src={imageUrl}
           fill={true}
-          className="rounded-lg h-12 w-12 object-cover"
+          className="rounded-lg h-12 w-12 object-cover border-2  border-gray-200"
         />
       </div>
-      <p className="font-semibold">{dishTitle}</p>
+      <p className="font-montserrat font-semibold text-sm text-gray-700">
+        {dishTitle}
+      </p>
     </Link>
   );
 }
