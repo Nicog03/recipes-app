@@ -5,6 +5,7 @@ import { getSearchResults } from "../../../api/api-requests";
 import CompactCard from "../components/compact-card";
 import Header from "../components/header-component";
 import SearchBar from "../components/search-bar";
+import SquaredButton from "../components/squared-button";
 
 type ResultType = {
   title: string;
@@ -21,7 +22,10 @@ export default function SearchPage() {
   return (
     data && (
       <div className="ps-5 pe-5 pt-5 flex flex-col gap-2">
-        <Header size="large" text="Search" />
+        <div className="flex gap-2 bg-slate-100 p-2 rounded-xl items-center">
+          <SquaredButton imageUrl="/icons/left-caret-icon.svg" />
+          <Header size="large" text="Search" />
+        </div>
         <SearchBar placeholder="Search for dishes" />
         <div
           className="p-5 flex flex-col gap-2 rounded-ss-2xl rounded-se-2xl"
