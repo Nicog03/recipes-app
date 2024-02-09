@@ -6,6 +6,7 @@ import CompactCard from "../components/compact-card";
 import Header from "../components/header-component";
 import SearchBar from "../components/search-bar";
 import SquaredButton from "../components/squared-button";
+import { useSearchParams } from "next/navigation";
 
 type ResultType = {
   title: string;
@@ -14,10 +15,14 @@ type ResultType = {
 };
 
 export default function SearchPage() {
+  const searchParams = useSearchParams();
+
+  const search = searchParams.get("term");
+
   const { data } = useQuery({
     queryKey: ["search-results"],
-    queryFn: () => getSearchResults("beans"),
-    staleTime: 1000 * 60 * 10,
+    queryFn: () => getSearchResults(search!),
+    // staleTime: 1000 * 60 * 10,
   });
 
   return (
