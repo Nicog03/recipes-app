@@ -10,6 +10,7 @@ import SquaredButton from "../components/squared-button";
 type ResultType = {
   title: string;
   image: string;
+  id: number;
 };
 
 export default function SearchPage() {
@@ -36,7 +37,11 @@ export default function SearchPage() {
         >
           <Header size="medium" text="Results for Beans" />
           {data.results.map((result: ResultType) => (
-            <CompactCard dishTitle={result.title} imageUrl={result.image} />
+            <CompactCard
+              dishTitle={result.title}
+              imageUrl={result.image}
+              id={result.id}
+            />
           ))}
         </div>
       </div>
