@@ -5,6 +5,7 @@ import CompactCard from "../compact-card";
 import { useQuery } from "@tanstack/react-query";
 import { getSearchResults } from "../../../../api/api-requests";
 import { useSearchParams } from "next/navigation";
+import LoadingSearchResultSection from "./loading-search-result-section";
 
 type ResultType = {
   title: string;
@@ -24,11 +25,10 @@ export default function SearchResults() {
     staleTime: 1000 * 60 * 10,
   });
 
-  return (
-    data &&
-    (isFetching ? (
-      <p>Hold on...</p>
-    ) : (
+  return isFetching ? (
+    <LoadingSearchResultSection />
+  ) : (
+    data && (
       <div
         className="p-5 flex flex-col gap-2 rounded-ss-2xl rounded-se-2xl"
         style={{
@@ -45,6 +45,6 @@ export default function SearchResults() {
           />
         ))}
       </div>
-    ))
+    )
   );
 }
