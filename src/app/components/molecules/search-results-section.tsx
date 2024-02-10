@@ -5,6 +5,7 @@ import CompactCard from "../compact-card";
 import { useQuery } from "@tanstack/react-query";
 import { getSearchResults } from "../../../../api/api-requests";
 import { useSearchParams } from "next/navigation";
+import { useEffect } from "react";
 
 type ResultType = {
   title: string;
@@ -18,7 +19,7 @@ export default function SearchResults() {
   const search = searchParams.get("term");
 
   const { data, isFetching } = useQuery({
-    queryKey: ["search-results"],
+    queryKey: [`${search}-search-results`],
     queryFn: () => getSearchResults(search!),
     refetchOnWindowFocus: false,
     staleTime: 1000 * 60 * 10,
