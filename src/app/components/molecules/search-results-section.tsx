@@ -5,7 +5,6 @@ import CompactCard from "../compact-card";
 import { useQuery } from "@tanstack/react-query";
 import { getSearchResults } from "../../../../api/api-requests";
 import { useSearchParams } from "next/navigation";
-import { useEffect } from "react";
 
 type ResultType = {
   title: string;
