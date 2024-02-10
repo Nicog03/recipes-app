@@ -16,10 +16,10 @@ const CategoryCard: React.FC<CategoryCardInterface> = ({
     <Link href={"#"}>
       <div
         style={{ backgroundColor: `var(${cardColor})` }}
-        className=" w-40 h-40 rounded-2xl flex flex-col items-center justify-center gap-2 hover:brightness-105 transition"
+        className="[&>img]:hover:scale-110 w-40 h-40 rounded-2xl flex flex-col items-center justify-center gap-2 hover:brightness-105 transition"
       >
         <Image
-          className="mix-blend-luminosity h-24 w-24"
+          className="mix-blend-luminosity h-24 w-24 transition"
           alt="category image"
           src={imageUrl}
           width={512}
