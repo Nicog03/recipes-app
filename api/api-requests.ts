@@ -31,9 +31,9 @@ export type Dish = {
   glutenFree: boolean;
 };
 
-export async function getRandomRecipes() {
+export async function getRandomRecipes(amount: string) {
   const res = await fetch(
-    `https://api.spoonacular.com/recipes/random?number=5&apiKey=${process.env.NEXT_PUBLIC_API_KEY}`
+    `https://api.spoonacular.com/recipes/random?number=${amount}&apiKey=${process.env.NEXT_PUBLIC_API_KEY}`
   );
   const recipes = await res.json();
   return recipes;
