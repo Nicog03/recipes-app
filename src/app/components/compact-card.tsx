@@ -15,7 +15,7 @@ export default function CompactCard({
   return (
     <Link
       href={`/product/${id}`}
-      className="flex gap-3 items-start bg-white p-2 rounded-2xl h-fit"
+      className="flex gap-3 items-start bg-white p-2 rounded-2xl h-fit hover:bg-gray-100 transition"
     >
       <div className="h-20 w-20 relative flex-shrink-0 ">
         <Image
