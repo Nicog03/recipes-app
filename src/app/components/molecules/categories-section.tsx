@@ -3,24 +3,28 @@ import CategoryCard from "../category-card";
 
 const CategoryInfoArray = [
   {
-    name: "Meat",
+    name: "Main Course",
     imageUrl: "/images/steak.png",
     color: "--blue-accent",
+    type: "main-course",
   },
   {
     name: "Dessert",
     imageUrl: "/images/cake.png",
     color: "--pink-accent",
+    type: "dessert",
   },
   {
-    name: "Vegetaria",
+    name: "Salad",
     imageUrl: "/images/salad.png",
     color: "--green-accent",
+    type: "salad",
   },
   {
     name: "Drinks",
     imageUrl: "/images/orange-juice.png",
     color: "--yellow-accent",
+    type: "drink",
   },
 ];
 
@@ -35,6 +39,7 @@ const CategoriesSection = () => {
             imageUrl={node.imageUrl}
             cardColor={node.color}
             key={node.name}
+            type={node.type}
           />
         ))}
       </div>
