@@ -22,8 +22,11 @@ const DishCard: React.FC<LocationType> = ({
       <div
         className=" flex items-end h-60 w-48 bg-gray-200 rounded-3xl"
         style={{
-          backgroundImage: `linear-gradient(to bottom, transparent, transparent, black), url(${imagePath})`,
+          backgroundImage: `linear-gradient(to bottom, transparent, transparent, black), url(${
+            imagePath ? imagePath : "/images/cloche.png"
+          })`,
           backgroundSize: "cover",
+          backgroundBlendMode: `${!imagePath ? "luminosity" : ""}`,
         }}
       >
         <div className="font-montserrat flex flex-col justify-between p-3 h-full w-full">
