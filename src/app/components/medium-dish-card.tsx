@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Dish } from "../../../api/api-requests";
+import Link from "next/link";
 
 interface MediumDishCardType {
   dish: Dish;
@@ -7,7 +8,10 @@ interface MediumDishCardType {
 
 const MediumDishCard: React.FC<MediumDishCardType> = ({ dish }) => {
   return (
-    <div className="flex flex-col h-40 w-40 bg-gray-200 rounded-2xl item ">
+    <Link
+      href={`/product/${dish.id}`}
+      className="flex flex-col h-40 w-40 bg-gray-200 rounded-2xl hover:brightness-95 transition"
+    >
       <div className="relative w-full h-full">
         <Image
           alt="dish image"
@@ -23,7 +27,7 @@ const MediumDishCard: React.FC<MediumDishCardType> = ({ dish }) => {
           {dish.title}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 
