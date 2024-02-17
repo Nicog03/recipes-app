@@ -24,6 +24,13 @@ const config: Config = {
         },
       },
     },
+    screens: {
+      sm: "768px",
+      md: "960px",
+      lg: "1200px",
+      xl: "1416px",
+      "2xl": "1920px",
+    },
   },
   plugins: [],
 };
