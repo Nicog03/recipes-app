@@ -11,7 +11,7 @@ export default function LoadingDishPage() {
       before:animate-[shimmer_2s_infinite]
       before:bg-gradient-to-r before:from-transparent 
       before:via-white before:to-transparent
-      isolate overflow-hidden"
+      isolate overflow-hidden sm:max-w-3xl mx-auto"
     >
       {/* dish image */}
       <div className="relative -z-10">

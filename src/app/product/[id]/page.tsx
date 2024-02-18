@@ -23,14 +23,16 @@ const AttractionPage = ({ params }: any) => {
     <LoadingDishPage />
   ) : (
     data && (
-      <div className="p-5 flex flex-col gap-6 h-screen ">
+      <div className="p-5 flex flex-col gap-6 h-screen sm:max-w-3xl sm:mx-auto">
         <LargeAttractionImage imageUrl={data.image} />
-        <DescriptionHeading
-          title={data.title}
-          credits={data.sourceName}
-          sourceUrl={data.sourceUrl}
-        />
-        <DescriptionParagraph description={data.summary} />
+        <div className="flex flex-col gap-6 flex-1">
+          <DescriptionHeading
+            title={data.title}
+            credits={data.sourceName}
+            sourceUrl={data.sourceUrl}
+          />
+          <DescriptionParagraph description={data.summary} />
+        </div>
         <DishInformation
           dairyFree={data.dairyFree}
           readyInMinutes={data.readyInMinutes}
