@@ -29,7 +29,7 @@ const SearchBar: React.FC<SearchBar> = ({ placeholder }) => {
 
   return (
     <>
-      <form onSubmit={navigate}>
+      <form onSubmit={navigate} className="md:w-96 md:self-end">
         <span className="flex items-center relative h-14">
           {!isValid && (
             <p className="absolute text-sm -bottom-5 left-3 font-montserrat text-red-400 font-semibold">
