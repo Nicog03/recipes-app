@@ -42,6 +42,7 @@ export default function SearchResults() {
             dishTitle={result.title}
             imageUrl={result.image}
             id={result.id}
+            key={result.id}
           />
         ))}
       </div>
