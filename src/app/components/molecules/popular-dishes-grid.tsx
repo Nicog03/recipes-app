@@ -9,12 +9,7 @@ const PopularDishesGrid: React.FC<PopularDishesGridInterface> = ({
   recipes,
 }) => {
   return (
-    <div
-      className="grid w-full gap-2   justify-center"
-      style={{
-        gridTemplate: "repeat(auto-fit, 160px) / repeat(auto-fit, 160px)",
-      }}
-    >
+    <div className="inline-flex flex-wrap gap-1 ">
       {recipes.map((dish) => (
         <MediumDishCard dish={dish} />
       ))}
