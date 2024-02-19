@@ -7,7 +7,7 @@ interface TitleTypes {
 
 const HomepageTitle: React.FC<TitleTypes> = ({ userName }) => {
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between font-montserrat">
       <div className="flex gap-3">
         <Image
           alt="chef hat icon"
@@ -17,7 +17,7 @@ const HomepageTitle: React.FC<TitleTypes> = ({ userName }) => {
         ></Image>
         <div>
           <p className="text-sm">Hello,</p>
-          <h1 className="text-3xl font-medium">{userName}</h1>
+          <h1 className="text-3xl font-semibold">{userName}</h1>
         </div>
       </div>
       {/* 
