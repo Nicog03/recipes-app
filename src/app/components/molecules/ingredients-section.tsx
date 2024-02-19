@@ -20,7 +20,7 @@ const IngredientsSection: React.FC<IngredientsSectionInterface> = ({
         style={{
           backgroundImage:
             "url(/images/groceries.png), url(/images/pattern.jpg)",
-          backgroundSize: "60%, cover",
+          backgroundSize: "250px, cover",
           backgroundPosition: "120% 100%, top",
           backgroundRepeat: "no-repeat",
         }}
