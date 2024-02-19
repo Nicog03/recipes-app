@@ -23,7 +23,12 @@ const DishInformation: React.FC<DishInformationInterface> = ({
   return (
     <div className="flex flex-col gap-1">
       <Header text="Dish Information" size="small" />
-      <div className="grid grid-cols-4 gap-2">
+      <div
+        className="grid gap-2"
+        style={{
+          gridTemplate: "repeat(auto-fit, 80px) / repeat(auto-fit, 80px)",
+        }}
+      >
         <InformationItem
           name={`${readyInMinutes} min`}
           iconUrl="/icons/cronometer-icon.svg"

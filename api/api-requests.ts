@@ -57,7 +57,7 @@ export async function getSearchResults(string: string) {
 
 export async function getDishCategory(category: string) {
   const res = await fetch(
-    `https://api.spoonacular.com/recipes/complexSearch?${category}&number=10&apiKey=${process.env.NEXT_PUBLIC_API_KEY}`
+    `https://api.spoonacular.com/recipes/complexSearch?${category}&number=30&apiKey=${process.env.NEXT_PUBLIC_API_KEY}`
   );
   const recipe = await res.json();
   return recipe;
