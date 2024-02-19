@@ -10,7 +10,7 @@ import LoadingMediumCardGrid from "../components/molecules/loading-medium-card-g
 export default function DishesPage() {
   const { data, isFetching } = useQuery({
     queryKey: ["popular-recipes"],
-    queryFn: () => getRandomRecipes("10"),
+    queryFn: () => getRandomRecipes("25"),
     refetchOnWindowFocus: false,
     staleTime: 1000 * 60 * 5,
   });

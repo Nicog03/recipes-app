@@ -10,7 +10,7 @@ const MediumDishCard: React.FC<MediumDishCardType> = ({ dish }) => {
   return (
     <Link
       href={`/product/${dish.id}`}
-      className="flex flex-col h-40 w-40 bg-gray-200 rounded-2xl hover:brightness-95 transition"
+      className="flex flex-col h-40 md:h-52 w-40 md:w-52 bg-gray-200 rounded-2xl hover:brightness-95 transition"
     >
       <div className="relative w-full h-full">
         <Image

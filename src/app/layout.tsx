@@ -19,7 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ReactQueryProvider>{children}</ReactQueryProvider>
+        <ReactQueryProvider>
+          <div className="sm:text-lg xl:max-w-[1426px] 2xl:max-w-[1526px] mx-auto">
+            {children}
+          </div>
+        </ReactQueryProvider>
       </body>
     </html>
   );

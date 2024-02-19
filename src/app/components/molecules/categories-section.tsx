@@ -32,7 +32,12 @@ const CategoriesSection = () => {
   return (
     <section className="flex flex-col gap-4 pb-16">
       <Header text="Explore Categories" size="small" />
-      <div className="grid grid-cols-2 gap-2">
+      <div
+        className="grid gap-2"
+        style={{
+          gridTemplate: "repeat(auto-fit, 160px) / repeat(auto-fit, 160px)",
+        }}
+      >
         {CategoryInfoArray.map((node) => (
           <CategoryCard
             categoryName={node.name}
