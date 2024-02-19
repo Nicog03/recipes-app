@@ -20,7 +20,7 @@ const DishCard: React.FC<LocationType> = ({
   return (
     <Link href={`/product/${id}`}>
       <div
-        className=" flex items-end h-60 w-48 md:h-[18rem] md:w-[15rem] bg-gray-200 rounded-3xl"
+        className=" flex items-end h-60 w-48 md:h-[18rem] md:w-[15rem] bg-gray-200 rounded-3xl select-none"
         style={{
           backgroundImage: `linear-gradient(to bottom, transparent, transparent, black), url(${
             imagePath ? imagePath : "/images/cloche.png"
