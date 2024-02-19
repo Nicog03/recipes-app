@@ -22,7 +22,7 @@ const Homepage = async () => {
   return (
     <div className="p-5 flex flex-col gap-6">
       <NavBar />
-      <HomepageTitle userName="Frederico" />
+      <HomepageTitle userName="User" />
       <SearchBar placeholder="Search for a dish" />
       <HydrationBoundary state={dehydrate(queryClient)}>
         <PopularSection />
