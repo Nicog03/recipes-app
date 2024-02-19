@@ -1,7 +1,5 @@
 import SquaredButton from "./squared-button";
 
-const numOfLines = [0, 0, 0, 0, 0];
-
 export default function LoadingDishPage() {
   return (
     <div
@@ -30,9 +28,11 @@ export default function LoadingDishPage() {
       </div>
       {/* description */}
       <div className="flex flex-col gap-1">
-        {numOfLines.map((line) => (
-          <div className="rounded-full h-4 w-full bg-gray-300" />
-        ))}
+        <div className="rounded-full h-4 w-full bg-gray-300" />
+        <div className="rounded-full h-4 w-full bg-gray-300" />
+        <div className="rounded-full h-4 w-full bg-gray-300" />
+        <div className="rounded-full h-4 w-full bg-gray-300" />
+        <div className="rounded-full h-4 w-full bg-gray-300" />
         <div className="rounded-full h-3 w-28 bg-gray-300" />
       </div>
       {/* section */}
