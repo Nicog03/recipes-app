@@ -15,7 +15,7 @@ export default function LargeDishCard({
   return (
     <Link
       href={`/product/${id}`}
-      className="w-full h-52 flex flex-col bg-gray-100 rounded-2xl relative"
+      className="w-full h-52 md:h-64 flex flex-col bg-gray-100 rounded-2xl relative"
     >
       <div
         className="absolute left-0 top-0 right-0 bottom-0 z-10 rounded-2xl"
