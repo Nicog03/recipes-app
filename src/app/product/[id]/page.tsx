@@ -10,8 +10,6 @@ import { useQuery } from "@tanstack/react-query";
 import { getRecipe } from "../../../../api/api-requests";
 import LoadingDishPage from "@/app/components/loading-dish-page";
 
-export const dynamic = "force-dynamic";
-
 const AttractionPage = ({ params }: any) => {
   const id = params.id;
 
