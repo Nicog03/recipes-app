@@ -1,5 +1,6 @@
 import SquaredButton from "./squared-button";
 import RoundedButton from "./rounded-button";
+import Image from "next/image";
 
 interface LargeAttractionImageInterface {
   imageUrl: string;
@@ -10,14 +11,17 @@ const LargeAttractionImage: React.FC<LargeAttractionImageInterface> = ({
 }) => {
   return (
     <div className="relative">
-      <div className="absolute left-3 top-3">
+      <div className="absolute left-3 top-3 z-10">
         <SquaredButton imageUrl="/icons/left-caret-icon.svg" />
       </div>
-      <img
-        src={imageUrl}
-        alt="Image of the attraction"
-        className="h-80 w-full object-cover rounded-3xl"
-      />
+      <div className="h-80 w-full">
+        <Image
+          src={imageUrl}
+          alt="Image of the attraction"
+          fill={true}
+          className="object-cover rounded-3xl"
+        />
+      </div>
       <span className="absolute right-3 -bottom-5 ">
         <RoundedButton
           imageUrl="/icons/heart-lined.svg"
