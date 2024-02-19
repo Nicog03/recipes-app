@@ -15,7 +15,8 @@ const Homepage = async () => {
 
   await queryClient.prefetchQuery({
     queryKey: ["random-recipes"],
-    queryFn: () => getRandomRecipes("5"),
+    queryFn: () => getRandomRecipes("10"),
+    staleTime: 1000 * 60 * 2,
   });
 
   return (
