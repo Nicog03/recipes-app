@@ -12,7 +12,7 @@ const DescriptionParagraph: React.FC<DescriptionParagraphInterface> = ({
 
   return (
     <div className="flex flex-col gap-1">
-      <div className="text-gray-500 font-montserrat text-sm leading-4 relative">
+      <div className="text-gray-500 font-montserrat text-sm sm:text-base sm:leading-5 leading-4 relative">
         {hidden && (
           <span
             className="absolute left-0 right-0 top-0 bottom-0"
