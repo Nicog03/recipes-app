@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface TitleTypes {
   userName: string;
@@ -19,6 +20,20 @@ const HomepageTitle: React.FC<TitleTypes> = ({ userName }) => {
           <h1 className="text-3xl font-medium">{userName}</h1>
         </div>
       </div>
+      {/* 
+      This will only be displayed when the screen has a width larger that 768px 
+      */}
+      <ul className="hidden sm:flex gap-5 font-montserrat hover:[&_a]:text-[--accent] [&_a]:transition">
+        <li>
+          <Link href="/">Home</Link>
+        </li>
+        <li>
+          <Link href="#">Favorites</Link>
+        </li>
+        <li>
+          <Link href="#">Profile</Link>
+        </li>
+      </ul>
       <button className="opacity-50 hover:opacity-100 transition">
         <Image
           src={"icons/help-icon.svg"}

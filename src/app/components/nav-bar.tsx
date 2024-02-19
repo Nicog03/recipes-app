@@ -10,7 +10,8 @@ const NavBar = () => {
   console.log(pathName);
 
   return (
-    <div className=" bg-white w-full flex items-center gap-12 justify-center h-16 fixed bottom-0 left-0 py-6 rounded-t-[2rem] border-2 border-gray-200 z-10">
+    // Will be hidden when the screen has a width larger than 768px
+    <div className="sm:hidden bg-white w-full flex items-center gap-12 justify-center h-16 fixed bottom-0 left-0 py-6 rounded-t-[2rem] border-2 border-gray-200 z-10">
       <Link
         href={"#"}
         className={
