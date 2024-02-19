@@ -33,7 +33,7 @@ export type Dish = {
 
 export async function getRandomRecipes(amount: string) {
   const res = await fetch(
-    `https://api.spoonacular.com/recipes/random?number=${amount}&apiKey=${process.env.API_KEY}`
+    `https://api.spoonacular.com/recipes/random?number=${amount}&apiKey=${process.env.NEXT_PUBLIC_API_KEY}`
   );
   const recipes = await res.json();
   return recipes;
@@ -41,7 +41,7 @@ export async function getRandomRecipes(amount: string) {
 
 export async function getRecipe(id: number) {
   const res = await fetch(
-    `https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.API_KEY}`
+    `https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.NEXT_PUBLIC_API_KEY}`
   );
   const recipe = (await res.json()) as Dish;
   return recipe;
@@ -49,7 +49,7 @@ export async function getRecipe(id: number) {
 
 export async function getSearchResults(string: string) {
   const res = await fetch(
-    `https://api.spoonacular.com/recipes/complexSearch?query=${string}&number=10&apiKey=${process.env.API_KEY}`
+    `https://api.spoonacular.com/recipes/complexSearch?query=${string}&number=10&apiKey=${process.env.NEXT_PUBLIC_API_KEY}`
   );
   const recipe = await res.json();
   return recipe;
@@ -57,7 +57,7 @@ export async function getSearchResults(string: string) {
 
 export async function getDishCategory(category: string) {
   const res = await fetch(
-    `https://api.spoonacular.com/recipes/complexSearch?${category}&number=30&apiKey=${process.env.API_KEY}`
+    `https://api.spoonacular.com/recipes/complexSearch?${category}&number=30&apiKey=${process.env.NEXT_PUBLIC_API_KEY}`
   );
   const recipe = await res.json();
   return recipe;
