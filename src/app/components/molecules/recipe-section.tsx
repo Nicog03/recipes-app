@@ -17,7 +17,7 @@ const RecipeSection: React.FC<RecipeSectionInterface> = ({ recipe }) => {
       }}
     >
       <Header text="Recipe" size="small" />
-      <ol className="flex flex-col gap-3 ps-5 relative">
+      <ol className="flex flex-col gap-5 ps-5 relative">
         {instructionsArray.map((step) => (
           <li
             className="relative px-3 py-2 rounded-xl bg-white font-montserrat"
