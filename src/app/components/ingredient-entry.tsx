@@ -11,7 +11,7 @@ const IngredientEntry: React.FC<IngredientEntryInterface> = ({
 }) => {
   return (
     <li className="bg-white w-fit rounded-full px-3 py-1">
-      <p className="font-montserrat text-base">
+      <p className="font-montserrat ">
         {name}{" "}
         <b className="text-[--accent]">
           {amount} {unit}
