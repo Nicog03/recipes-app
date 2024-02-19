@@ -42,7 +42,7 @@ const AttractionPage = ({ params }: any) => {
           glutenFree={data.glutenFree}
         />
         <IngredientsSection ingredients={data.extendedIngredients} />
-        <RecipeSection recipe={data.analyzedInstructions} />
+        <RecipeSection recipe={data.analyzedInstructions as any} />
       </div>
     )
   );
