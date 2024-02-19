@@ -26,7 +26,7 @@ const RecipeSection: React.FC<RecipeSectionInterface> = ({ recipe }) => {
             <p className="absolute -left-10 -top-4 text-5xl font-semibold -z-10 text-white bg-[--accent] w-12 h-12 rounded-full text-center">
               {step.number}
             </p>
-            {step.step}
+            <p className="text-base">{step.step}</p>
           </li>
         ))}
       </ol>
