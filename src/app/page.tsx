@@ -10,6 +10,8 @@ import {
 } from "@tanstack/react-query";
 import { getRandomRecipes } from "../../api/api-requests";
 
+export const dynamic = "force-dynamic";
+
 const Homepage = async () => {
   const queryClient = new QueryClient();
 
