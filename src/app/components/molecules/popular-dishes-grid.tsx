@@ -11,7 +11,7 @@ const PopularDishesGrid: React.FC<PopularDishesGridInterface> = ({
   return (
     <div className="inline-flex flex-wrap gap-1 ">
       {recipes.map((dish) => (
-        <MediumDishCard dish={dish} />
+        <MediumDishCard dish={dish} key={dish.id} />
       ))}
     </div>
   );
