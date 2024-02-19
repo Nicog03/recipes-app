@@ -1,8 +1,13 @@
 import { InstructionType } from "../../../../api/api-requests";
 import Header from "../header-component";
 
+type analyzedIntructions = {
+  name: string;
+  steps: [];
+};
+
 interface RecipeSectionInterface {
-  recipe: [];
+  recipe: [analyzedIntructions];
 }
 
 const RecipeSection: React.FC<RecipeSectionInterface> = ({ recipe }) => {
