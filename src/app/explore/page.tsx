@@ -30,18 +30,20 @@ export default function ExplorePage() {
           text={`Explore ${capitalizeFirstLetter(type!.replace("-", " "))}`}
         />
       </div>
-      {data ? (
-        data.results.map((dish: Dish) => (
-          <LargeDishCard
-            key={dish.id}
-            id={dish.id}
-            image={dish.image}
-            title={dish.title}
-          />
-        ))
-      ) : (
-        <LoadingLargeDishCard />
-      )}
+      <div className="w-full grid gap-5 md:grid-cols-3">
+        {data ? (
+          data.results.map((dish: Dish) => (
+            <LargeDishCard
+              key={dish.id}
+              id={dish.id}
+              image={dish.image}
+              title={dish.title}
+            />
+          ))
+        ) : (
+          <LoadingLargeDishCard />
+        )}
+      </div>
     </div>
   );
 }
