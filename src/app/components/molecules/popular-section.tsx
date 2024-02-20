@@ -8,6 +8,8 @@ import { useQuery } from "@tanstack/react-query";
 import LoadingCard from "../loading-card";
 import { useRouter } from "next/navigation";
 
+export const dynamic = "force-dynamic";
+
 const PopularSection = () => {
   const { push } = useRouter();
 
