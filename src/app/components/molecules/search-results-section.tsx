@@ -13,6 +13,8 @@ type ResultType = {
   id: number;
 };
 
+export const dynamic = "force-dynamic";
+
 export default function SearchResults() {
   const searchParams = useSearchParams();
 
