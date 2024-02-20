@@ -6,9 +6,9 @@ import ReactQueryProvider from "../../providers/ReactQueryProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Travel App",
+  title: "Recipes App",
   description:
-    "An application that allows the user to browse and check different points of interests around the world.",
+    "An application in which the user can browse and check different types of dishes as well as its required ingredients and recipes for preparation.",
 };
 
 export default function RootLayout({
